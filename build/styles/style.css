@@ -2,26 +2,29 @@
   margin-bottom: 8px;
 }
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 body {
-  background-color: #23060a;
+  background: linear-gradient(to bottom, #132e3571, #0d1f23);
   color: #dff9fb;
+  height: 100vh;
+  overflow: hidden;
 }
 li {
   list-style: none;
 }
 .container {
-  max-width: 780px;
+  background-color: rgba(19, 46, 53, 0.3);
+  max-width: 580px;
   width: 100%;
-  margin: 0 auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top: 100px;
+  padding: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: all ease-in-out 0.5s;
 }
 @media (max-width: 767px) {
   .container {
@@ -41,16 +44,17 @@ header .profile-avatar {
   margin: 0 auto 24px;
   border-radius: 100px;
   height: 150px;
+  border: 2px solid #132e35;
 }
 .profile-bio {
   text-align: center;
 }
 .profile-bio-name {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 8px;
 }
 .profile-bio-subtitle {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 .profile-bio-description {
@@ -60,23 +64,30 @@ header .profile-avatar {
 .social-links {
   display: flex;
   justify-content: space-between;
-  max-width: 240px;
-  width: 100%;
+  width: 400px;
   margin: 0 auto;
 }
 .social-links li {
-  background-color: black;
+  background-color: #70929c;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.social-links li:hover {
+  transform: scale(1.1);
+  background-color: #0d1f239c;
+}
+.social-links li a {
   width: 54px;
   height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.social-links li img {
-  transition: all ease 0.3s;
-}
-.social-links li img:hover {
-  transform: scale(1.2);
 }
 .project-list {
   margin-top: 16px;
@@ -86,15 +97,16 @@ header .profile-avatar {
   padding: 16px 20px;
   margin-bottom: 16px;
   text-decoration: none;
-  background-color: #9b0800;
+  background-color: #0d1f23;
   text-align: center;
-  color: #dff9fb;
+  color: #70929c;
   font-weight: bold;
-  border-radius: 30px;
-  border: 2px solid #9b0800;
-  transition: all ease 0.5s;
+  border-radius: 15px;
+  border: 2px solid #0d1f23;
+  transition: all ease-in-out 0.4s;
 }
 .project-list-item a:hover {
-  color: #9b0800;
-  background-color: transparent;
+  color: #dff9fb;
+  background-color: #0d1f238f;
+  border: 2px solid #dff9fb;
 }
