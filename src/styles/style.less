@@ -3,7 +3,6 @@
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 
-
 .marginBottom8 {
     margin-bottom: 8px;
 }
@@ -37,11 +36,15 @@ li {
     transition: all ease-in-out 1s;
 
     @media @breakpointMobile {
-        max-width: 70%;
+        max-width: 90%;
+        padding: 20px;
+        margin-top: 60px;
+        overflow: hidden;
     }
 
     @media @breakpointTablet {
         max-width: 80%;
+        padding: 30px;
     }
 }
 
@@ -53,28 +56,58 @@ header {
         margin: 0 auto 24px;
         border-radius: 100px;
         height: 150px;
-        border: 2px solid #132e35;
+        border: 3px solid #132e35;
+
+        @media @breakpointMobile {
+            height: 120px;
+        }
+
+        @media @breakpointTablet {
+            height: 130px;
+        }
     }
 }
 
 .profile-bio {
     text-align: center;
 
-
-    // o & comercial permite que não precise utilizar o seletor por completo
     &-name {
         font-size: 18px;
         .marginBottom8();
+
+        @media @breakpointMobile {
+            font-size: 16px;
+        }
+
+        @media @breakpointTablet {
+            font-size: 17px;
+        }
     }
 
     &-subtitle {
         font-size: 16px;
         .marginBottom8();
+
+        @media @breakpointMobile {
+            font-size: 14px;
+        }
+
+        @media @breakpointTablet {
+            font-size: 15px;
+        }
     }
 
     &-description {
         font-size: 14px;
-        opacity: .7;
+        opacity: .5;
+
+        @media @breakpointMobile {
+            font-size: 12px;
+        }
+
+        @media @breakpointTablet {
+            font-size: 13px;
+        }
     }
 }
 
@@ -84,33 +117,57 @@ header {
     width: 400px;
     margin: 0 auto;
 
+    @media @breakpointMobile {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    @media @breakpointTablet {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
     li {
-        background-color: #colors[buttonColor];
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all ease-in-out .3s;
-
-        &:hover {
-            box-shadow: 0px 0px 15px 5px rgba(13, 31, 35, 0.56);
-        }
-
+    
         a {
+            background-color: #colors[buttonColor];
             width: 54px;
             height: 54px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all ease-in-out .4s;
+
+            &:hover {
+                box-shadow: 0px 0px 0px 6px rgba(13, 31, 35, 0.56);
+            }
+        }
+
+        @media @breakpointMobile {
+            width: 40px;
+            height: 40px;
+
+            a {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media @breakpointTablet {
+            width: 48px;
+            height: 48px;
+
+            a {
+                width: 48px;
+                height: 48px;
+            }
         }
     }
 }
 
 .project-list {
-    margin-top: 16px;
+    margin-top: 20px;
 
     &-item {
         a {
@@ -130,6 +187,16 @@ header {
                 color: #colors[textColor];
                 background-color: #0d1f238f;
                 border: 2px solid #dff9fb;
+            }
+
+            @media @breakpointMobile {
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+
+            @media @breakpointTablet {
+                padding: 14px 18px;
+                font-size: 15px;
             }
         }
     }
